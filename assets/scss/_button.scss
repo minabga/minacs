@@ -1,0 +1,28 @@
+//*************************
+// $$ Button
+//**************************
+
+.button {
+	display:inline-block;
+	padding:0.5em 2em;
+
+	color:#fff;
+	font-size:1.25em;
+
+	background:$color-brand;
+	border:1px solid #000;
+	border-radius:0;
+	outline:0;
+	transition:0.3s;
+	cursor:pointer;
+
+	appearance:none;
+}
+.button:hover,
+.button:focus,
+.button:active {
+	color:#333;
+	background:$color-highlight;
+	outline:none;
+}
+

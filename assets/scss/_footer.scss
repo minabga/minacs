@@ -1,0 +1,33 @@
+//*************************
+// $$ Footer
+//**************************
+
+.site-footer {
+	padding:50px;
+	text-align:center;
+	background:#fff;
+	border-top:1rem solid #333;
+}
+.site-footer p {
+	color:#999;
+	font-size:1rem;
+}
+.site-footer a {
+	color:#999;
+}
+
+.footer-title {
+	position:absolute;
+	bottom:-0.6em;
+	left:0;
+
+	width:100%;
+
+	color:rgba(255,255,255,0.1);
+	font-size:5em;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+
+	transform:scaleY(1.2);
+}

@@ -1,0 +1,49 @@
+//*************************
+// $$ Panel
+//**************************
+
+.site-panel {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:60%;
+	transform:translate(-50%, -50%);
+
+	@include respond-to(960px) {
+		width:80%;
+	}
+	@include respond-to(500px) {
+		width:90%;
+	}
+}
+.site-panel--wide {
+	width:90%;
+}
+.content-panel {
+	width:50%;
+	max-width:40em;
+
+	@media screen and (max-width:960px) {
+		width:65%;
+	}
+	@include respond-to(700px) {
+		width:80%;
+	}
+	@include respond-to(500px) {
+		position:static;
+		width:100%;
+	}
+}
+
+.content-panel--customers {
+	position:relative;
+	left:40%;
+
+	@include respond-to(960px) {
+		left:35%;
+	}
+	@include respond-to(700px) {
+		left:0;
+	}
+}
+

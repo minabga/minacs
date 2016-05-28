@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Websites for Car Service Direct | MinaB digi-Nomad</title>
+		<meta charset="utf-8">
+		<meta name="description" content="We make websites and apps for foodies.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="shortcut icon" href="sapling/favicon.ico">
+	</head>
+	<body>
+
+		<main role="main">
+			<section class="site-section intro">
+				<div class="site-panel">
+					<h1 class="section-title">Free nationwide collection and delivery, with<br>1500+ garages we collect from home or work.</h1>
+					<h2>Discover the benefits of using car service direct. Convenient, Easy and Efficient </h2>
+				</div>
+			</section>
+
+			<section id="story" class="content-section content-section--dark">
+				<img class="section-image section-image--story" src="assets/images/audi2.png" alt="photo of plate of food">
+				<div class="content-panel">
+					<h2 class="section-title">Tell your story<br>and show off your&nbsp;brand.</h2>
+					<p>Are your recipes steeped in history? Are your ingredients from far-away exotic places? Or are they fresh from just a few miles&nbsp;away?</p>
+					<p>People love stories, whether listening or telling, over coffee or something stronger, round the dinner table or over social networks. Stories amaze and inspire and spark&nbsp;debate.</p>
+					<p>We’ll give your brand a voice online and tickle the tastebuds of potential diners long before their table is&nbsp;ready.</p>
+				</div>
+			</section>
+			<section id="customers" class="content-section content-section--light">
+				<img class="section-image section-image--customers" src="assets/images/mondeo.png" alt="photo of plate of food">
+				<div class="content-panel content-panel--customers">
+					<h2 class="section-title">Engage with new and existing customers and keep them in the&nbsp;loop.</h2>
+					<p>A restaurant website is great for showing off the food, the venue, how to get there and service times but it can be so much&nbsp;more!</p>
+					<p>Harness the power of social media and use your site to promote offers, competitions, events and&nbsp;announcements.</p>
+					<p>We’ll provide everything you need to manage the content on the site. Or, if you prefer, we can take care of all that for you. No&nbsp;worries.</p>
+				</div>
+			</section>
+			<section id="grow" class="content-section content-section--dark">
+				<img class="section-image section-image--grow" src="assets/images/plate3.png" alt="photo of plate of food">
+				<div class="content-panel">
+					<h2 class="section-title">Grow your email subscribers and&nbsp;build a loyal&nbsp;following.</h2>
+					<p>Constantly encouraging new customers through the door can be very expensive. Instead, focus on tempting existing customers back for&nbsp;more!</p>
+					<p>Email is one of the most powerful ways to reach your audience directly so we meticulously optimise and measure conversions to grow your email&nbsp;list.</p>
+				</div>
+			</section>
+
+			<section id="people" class="site-section site-section--people">
+				<div class="site-panel site-panel--wide">
+					<h1 class="section-title">Websites made for foodies, by foodies <small>in London</small></h1>
+				</div>
+			</section>
+
+			<section id="form" class="content-section content-section--dark form-section">
+				<div class="form-intro">
+					<h2 class="section-title">Have a project in mind? Let’s&nbsp;talk!</h2>
+					<p>We start each project with an informal chat &mdash; preferably over a nice double espresso &mdash; to get a sense of your business and ensure we’re a good fit for each&nbsp;other.</p>
+					<p>Leave your name and email and we’ll be in touch within 24 hours.</p>
+				</div>
+
+				<form class="form-contact" action="http://formspree.io/guy.routledge@sapling.digital" method="post">
+					<div class="form__field">
+						<input type="text" id="name" name="name" required>
+						<label for="name">Your full name <span class="form__required">*</span></label>
+					</div>
+					<div class="form__field">
+						<input type="email" id="email" name="email" required>
+						<label for="email">Your email <span class="form__required">*</span></label>
+					</div>
+					<div class="form__field">
+						<input type="tel" id="phone" name="phone">
+						<label for="phone">Phone number <span class="form__optional">(optional)</span></label>
+					</div>
+					<div class="form__action">
+						<input type="submit" class="button" value="Let's do this!">
+					</div>
+				</form>
+				<footer class="form__footer"><small>Or, if you prefer, send an email to <a href="mailto:guy.routledge@sapling.digital?subject=Website enquiry">guy.routledge@sapling.digital</a></small></footer>
+			</section>
+		</main>
+		<footer class="site-footer content-section content-section--light">
+			<img src="assets/images/logo.png" alt="Sapling logo">
+			<p>
+				Made with love by <a href="http://www.twitter.com/guyroutledge" target="_blank">@guyroutledge</a><br>
+				&copy; 2015 All Rights Reserved.
+			</p>
+		</footer>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+		<script>
+			var formFields = document.querySelectorAll('.form__field input');
+
+			for ( var i = 0; i < formFields.length; i++ ) {
+				formFields[i].addEventListener('blur', function(e){
+					var field = e.target;
+					var hasValue = field.value !== ''
+					var fieldLabel = field.nextElementSibling;
+
+					if ( hasValue ) {
+						fieldLabel.style.display = 'none';
+					} else {
+						fieldLabel.style.display = 'block';
+					}
+				});
+				formFields[i].addEventListener('focus', function(e){
+					var field = e.target;
+					var fieldLabel = field.nextElementSibling;
+					fieldLabel.style.display = 'block';
+				});
+			}
+			var storyWaypoint = new Waypoint({
+				element: document.getElementById('story'),
+				handler: function(){
+					console.log('waypoint reached');
+					document.querySelector('.section-image--story').className += ' fadeInRight';
+				},
+				offset: '50%'
+			});
+			var storyWaypoint = new Waypoint({
+				element: document.getElementById('customers'),
+				handler: function(){
+					console.log('waypoint reached');
+					document.querySelector('.section-image--customers').className += ' fadeInLeft';
+				},
+				offset: '50%'
+
+			});
+				
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+//*************************
+// $$ Intro
+//**************************
+
+.intro {
+	h1, h2 {
+		@supports (animation:foo) {
+			opacity:0;
+		}
+	}
+	h1 {
+		animation: fadeInDown 1s 0.25s 1;
+		animation-fill-mode:forwards;
+	}
+	h2 {
+		animation: fadeInUp 1s 0.5s 1;
+		animation-fill-mode:forwards;
+	}
+}
